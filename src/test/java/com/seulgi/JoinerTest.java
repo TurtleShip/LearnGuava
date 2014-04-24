@@ -61,7 +61,7 @@ public class JoinerTest {
     public void JoinerAppendsToAppendableInstance() {
         final String tempFileName = "temp.txt";
         File file = new File(tempFileName);
-        try( FileWriter fileWriter = new FileWriter(file)) {
+        try (FileWriter fileWriter = new FileWriter(file)) {
             Joiner joiner = Joiner.on("|").skipNulls();
             FileWriter appendedFileWriter = joiner.appendTo(fileWriter, STRING_LIST);
             appendedFileWriter.flush();
@@ -72,11 +72,10 @@ public class JoinerTest {
             assertThat(String.valueOf(buffer).trim(), is(EXPECTED_JOINED_STRING));
 
 
-
-        }catch(IOException ioe) {
+        } catch (IOException ioe) {
             ioe.printStackTrace();
-        }finally {
-            if(!file.delete()) {
+        } finally {
+            if (!file.delete()) {
                 System.out.println("Unable to delete " + tempFileName);
                 System.out.println("Please manually delete the file");
             }
@@ -90,7 +89,7 @@ public class JoinerTest {
         testMap.put("Seoul", "Korea");
         testMap.put("Washington D.C.", "U.S.");
         testMap.put("Tokyo", "Japan");
-        String returnedString =Joiner.on("|").withKeyValueSeparator("=").join(testMap);
+        String returnedString = Joiner.on("|").withKeyValueSeparator("=").join(testMap);
         assertThat(returnedString, is(expectedString));
     }
 
