@@ -8,8 +8,9 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+
 
 public class SplitterTest {
     private static final String DELIMITER = ",";
@@ -17,7 +18,7 @@ public class SplitterTest {
 
 
     @Test
-    public void SplitterSplitsString() {
+    public void splitterSplitsString() {
         String words = "One,Two,Three";
         Splitter splitter = Splitter.on(DELIMITER);
         List<String> splittedWords = Lists.newArrayList(splitter.split(words));
@@ -25,7 +26,7 @@ public class SplitterTest {
     }
 
     @Test
-    public void SplitterCanTrimResults() {
+    public void splitterCanTrimResults() {
         String words = "One    ,    Two    ,      Three";
         Splitter splitter = Splitter.on(DELIMITER).trimResults();
         List<String> splittedWords = Lists.newArrayList(splitter.split(words));
@@ -33,7 +34,7 @@ public class SplitterTest {
     }
 
     @Test
-    public void SplitterCanOmitEmptyStrings() {
+    public void splitterCanOmitEmptyStrings() {
         String words = "One, , , ,  , Two ,  ,  ,  , Three";
         Splitter splitter = Splitter.on(DELIMITER).trimResults().omitEmptyStrings();
         List<String> splittedWords = Lists.newArrayList(splitter.split(words));
@@ -41,7 +42,7 @@ public class SplitterTest {
     }
 
     @Test
-    public void MapSplitterCanCreateMaps() {
+    public void mapSplitterCanCreateMaps() {
         String startString = "Seoul=Korea|Washington D.C.=U.S.|Tokyo=Japan";
         Map<String, String> expectedMap = Maps.newLinkedHashMap();
         expectedMap.put("Seoul", "Korea");
