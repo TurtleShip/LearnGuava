@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /*
-  The CharMatcher class provdies functionality for working with characters
+  The CharMatcher class provides functionality for working with characters
   based on the presence or absence of a type of character or a range
   of characters. The methods in the CharMatcher class make formatting
   and working with text very simple.
