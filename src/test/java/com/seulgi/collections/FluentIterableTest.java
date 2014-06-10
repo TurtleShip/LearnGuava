@@ -2,14 +2,16 @@ package com.seulgi.collections;
 
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
-import com.google.common.collect.*;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Ordering;
 import com.seulgi.util.Person;
 import com.seulgi.util.Person.Sex;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
