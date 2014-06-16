@@ -1,4 +1,4 @@
-package com.seulgi.collections;
+package com.seulgi.collect;
 
 import com.google.common.collect.Lists;
 import com.seulgi.util.Person;

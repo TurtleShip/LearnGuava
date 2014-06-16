@@ -8,6 +8,8 @@ I tend to forget things, and reading through units tests helps me remember what 
 
 I read through [Getting started with Google Guava](http://www.amazon.com/Getting-started-Google-Guava-Bejeck-ebook/dp/B00EJIZRG6/ref=sr_1_1?ie=UTF8&qid=1398319339&sr=8-1&keywords=getting+started+with+guava) to get started with Guava. If you see any similarity between my tests and example codes from the book, my tests probably modeled after examples from the book.
 
+The offical Guava 16 API can be found [here]( http://docs.guava-libraries.googlecode.com/git-history/v16.0.1/javadoc/index.html).
+
 
 ## Dependencies
 - Maven 3.2

@@ -1,4 +1,4 @@
-package com.seulgi;
+package com.seulgi.base;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;

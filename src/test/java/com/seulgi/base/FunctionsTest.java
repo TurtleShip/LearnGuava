@@ -1,4 +1,4 @@
-package com.seulgi;
+package com.seulgi.base;
 
 import com.google.common.base.Function;
 import com.google.common.base.Functions;

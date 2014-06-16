@@ -1,4 +1,4 @@
-package com.seulgi;
+package com.seulgi.base;
 
 import com.google.common.base.CharMatcher;
 import org.junit.Test;
