@@ -1,8 +1,9 @@
 package com.seulgi.util;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.ComparisonChain;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     public enum Sex {
         MALE, FEMALE
@@ -50,6 +51,15 @@ public class Person {
 
     public void setSex(Sex sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return ComparisonChain.start()
+            .compare(this.firstName, other.getFirstName())
+            .compare(this.lastName, other.getLastName())
+            .compare(this.age, other.getAge())
+            .result();
     }
 
     @Override
